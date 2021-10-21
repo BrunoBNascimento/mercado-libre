@@ -25,3 +25,9 @@ Após seguir os passos do arquivo Readme.MD no repositório da api, execute os s
 `npm run test`
 
 ## Cobertura de testes
+
+Após executar os testes unitários, a cobertura dos componentes irá ser exibida:
+
+![Test Coverage](https://i.imgur.com/ptbeWsL.png)
+
+A Aplicação não está 100% coberta, somente os componentes mais críticos.
