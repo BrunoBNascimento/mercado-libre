@@ -1,7 +1,9 @@
+import { useCategories } from '../../commons/hooks/use-categories';
 import IProduct from '../../commons/types/Products';
 import Breadcrumbs from '../breadcrumbs';
 import BuyButton from '../buy-button';
 import Card from '../card';
+import Loading from '../loading';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -11,13 +13,14 @@ type Props = {
 
 function DetailsCard(props: Props) {
   const { product, loading } = props;
+  const { categories } = useCategories();
 
   return (
     <div className={styles.wrapper}>
-      {loading && 'carregando'}
+      {loading && <Loading />}
       {!loading && (
         <div className={styles.detailsWrapper}>
-          <Breadcrumbs items={['Iphone', '32GB']} />
+          {categories && <Breadcrumbs items={categories} />}
           <Card>
             <div className={styles.productDetail}>
               <div className={styles.thumb}>

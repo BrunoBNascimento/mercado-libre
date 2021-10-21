@@ -7,9 +7,12 @@ const useProductDetail = (id) => {
 
   useEffect(() => {
     async function fetch() {
+      setLoading(true);
+
       const { data } = await Api.get(`/api/items/${id}`);
 
       setItem(data.item);
+
       setLoading(false);
     }
 

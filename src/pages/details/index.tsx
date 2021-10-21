@@ -13,7 +13,7 @@ const Details = () => {
 
   return (
     <>
-      <Header />
+      <Header onTypeSearch={() => null} />
       <DetailsCard product={item} loading={loading} />
     </>
   );
