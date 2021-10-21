@@ -28,6 +28,6 @@ Após seguir os passos do arquivo Readme.MD no repositório da api, execute os s
 
 Após executar os testes unitários, a cobertura dos componentes irá ser exibida:
 
-![Test Coverage](https://i.imgur.com/ptbeWsL.png)
+![Test Coverage](https://i.imgur.com/IG9hiyo.png)
 
 A Aplicação não está 100% coberta, somente os componentes mais críticos.
