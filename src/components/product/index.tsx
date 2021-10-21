@@ -22,17 +22,18 @@ const Product = (props: Props) => {
         onClick={handleNavigate}
         onKeyDown={handleNavigate}
         role="link"
+        data-testid="product-item"
         className={styles.product}
         tabIndex={position}
       >
-        <div className={styles.thumb}>
+        <div className={styles.thumb} data-testid="thumbnail">
           <img src={picture} alt="" />
         </div>
         <div className={styles.data}>
           <h1>$ {price.amount}</h1>
           <h2>{title}</h2>
         </div>
-        <div className={styles.shipping}>test</div>
+        <div className={styles.shipping}>Capital</div>
       </div>
       <hr className={styles.divider} />
     </>
