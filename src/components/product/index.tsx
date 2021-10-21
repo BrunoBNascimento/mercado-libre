@@ -1,18 +1,30 @@
+import { useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import IProduct from '../../commons/types/Products';
 import styles from './styles.module.scss';
 
 type Props = {
   product: IProduct;
+  position: number;
 };
 
 const Product = (props: Props) => {
   const {
-    product: { picture, title, price },
+    product: { id, picture, title, price },
+    position,
   } = props;
+  const history = useHistory();
+  const handleNavigate = useCallback(() => history.push(`/items/${id}`), [id]);
 
   return (
     <>
-      <div className={styles.product}>
+      <div
+        onClick={handleNavigate}
+        onKeyDown={handleNavigate}
+        role="link"
+        className={styles.product}
+        tabIndex={position}
+      >
         <div className={styles.thumb}>
           <img src={picture} alt="" />
         </div>

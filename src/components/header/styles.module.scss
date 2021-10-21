@@ -1,3 +1,5 @@
+@import '../../commons/styles/variables.scss';
+
 .header {
   height: 60px;
   width: 100%;
@@ -9,7 +11,8 @@
 }
 
 .headerContainer {
-  width: 800px;
+  width: $container-size;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

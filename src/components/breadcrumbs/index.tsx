@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -9,7 +10,22 @@ const Breadcrumbs = (props: Props) => {
 
   return (
     <div className={styles.breadcrumbs}>
-      {items && items.map((item) => <span key={item}>{`${item} > `}</span>)}
+      {items &&
+        items.map((item, idx) => (
+          <>
+            <span
+              key={item}
+              className={classNames({
+                [styles.breadcrumbsLastItem]: idx === items.length - 1,
+              })}
+            >
+              {item}
+            </span>
+            {!(idx === items.length - 1) && (
+              <span className={styles.breadcrumbsSeparator}>{' > '}</span>
+            )}
+          </>
+        ))}
     </div>
   );
 };

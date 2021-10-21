@@ -15,7 +15,10 @@ const ProductsContainer = (props: Props) => {
     <div className={styles.container}>
       <Breadcrumbs items={['tal', 'coisa']} />
       <div className={styles.containerProducts}>
-        <Card>{products && products.map((item) => <Product key={item.id} product={item} />)}</Card>
+        <Card>
+          {products &&
+            products.map((item, idx) => <Product key={item.id} product={item} position={idx} />)}
+        </Card>
       </div>
     </div>
   );

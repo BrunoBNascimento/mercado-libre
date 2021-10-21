@@ -1,0 +1,39 @@
+@import '../../commons//styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.inputWrapper {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  width: 100%;
+
+  & input {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}
+
+.searchButton {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
