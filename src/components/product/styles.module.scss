@@ -1,0 +1,52 @@
+@import '../../commons/styles/colors.scss';
+
+.product {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.thumb {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  & img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.data {
+  min-width: 500px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  & h2,
+  h1 {
+    font-weight: normal;
+    margin: 10px;
+  }
+}
+
+.shipping {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 150px;
+}
+
+.divider {
+  border: 1px solid $gray;
+}
