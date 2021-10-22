@@ -5,12 +5,13 @@ import { useCategories } from '../../commons/hooks/use-categories';
 const useProducts = (name) => {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const { setCategories: setCategoriesInContext } = useCategories();
 
   useEffect(() => {
     async function fetch() {
       setLoading(true);
+
       const { data } = await Api.get('/api/items', { params: { name } });
 
       setItems(data.items);

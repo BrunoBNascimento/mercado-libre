@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import classNames from 'classnames';
 import isEmpty from 'lodash.isempty';
 import styles from './styles.module.scss';
@@ -13,9 +14,8 @@ const Breadcrumbs = (props: Props) => {
     <div className={styles.breadcrumbs}>
       {!isEmpty(items) &&
         items.map((item, idx) => (
-          <>
+          <Fragment key={item}>
             <span
-              key={item}
               className={classNames({
                 [styles.breadcrumbsLastItem]: idx === items.length - 1,
               })}
@@ -25,7 +25,7 @@ const Breadcrumbs = (props: Props) => {
             {!(idx === items.length - 1) && (
               <span className={styles.breadcrumbsSeparator}>{' > '}</span>
             )}
-          </>
+          </Fragment>
         ))}
     </div>
   );
