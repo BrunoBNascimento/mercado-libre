@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import isEmpty from 'lodash.isempty';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -10,7 +11,7 @@ const Breadcrumbs = (props: Props) => {
 
   return (
     <div className={styles.breadcrumbs}>
-      {items &&
+      {!isEmpty(items) &&
         items.map((item, idx) => (
           <>
             <span
